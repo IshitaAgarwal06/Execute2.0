@@ -1,63 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Execute 2.0</title>
 </head>
 <body>
-  <div class="nav"><h2 style="text-align: centre;color:white;">CONSULTANCY</h2></div>
+  <div class="nav"><h2 style="text-align: centre;color:white;">MODEL TO ENHANCE YOUR REVENUE</h2></div>
   <div class="main">
-    <!-- uniqueid=models.CharField(max_length=100,default="0")
-	companyname=models.CharField(max_length=100)
-	businesstype=models.CharField(max_length=100)
-	productname=models.CharField(max_length=100)
-	targetaudience=models.CharField(max_length=100)
-	theinfo=models.FileField(default="images/default.pdf")
-	fileuploaded=models.BooleanField(default=False)
-	mail=models.CharField(max_length=1000)
-	phno=models.CharField(max_length=100)
-	accepted=models.BooleanField(default=False) -->
-
     <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-     <!-- <label>UNIQUEID:</label>
-     <div>{{form.uniqueid}}</div> -->
-     <label>COMPANY NAME:</label>
+    {% csrf_token %}
+     <label>COMPANY NAME</label>
      <div>{{form.companyname}}</div>
-     <label>EMAIL</label>
+     <label>EMAIL ADDRESS</label>
      <div>{{form.mail}}</div>
-     <label>PHONE NUMBER</label>
+     <label>CONTACT NUMBER</label>
      <div>{{form.phno}}</div>
      <label>BUSINESS TYPE</label>
      <div>{{form.businesstype}}</div>
-     <label>PRODUCT NAME</label>
+     <label>PRODUCTS THAT YOU SELL</label>
      <div>{{form.productname}}</div>
-     <label>TARGET AUDIENCE</label>
+     <label>WHO ARE YOUR TARGET AUDIENCE</label>
      <div>{{form.targetaudience}}</div>
-     <label>INFO</label>
+     <br>
+     <label>ATTACH YOUR PRODUCTS AND THIER SALES HISTORY (if available)</label>
      <div>{{form.theinfo}}</div>
-     <!-- <label>FILE UPLOADED</label>
-     <div>{{form.fileuploaded}}</div> -->
-    <input type="submit" value="Submit">
-   
+      <!--<input type="submit" value="Submit">-->
+      <button class="button">SUBMIT</button>
     </form>
   </div>
 </body>
-
 <style>
   *{
     margin:0;
     padding:0;
     box-sizing: border-box;
   }
-
+  .button {
+  background-color: #9CC3D5FF; /* Green */
+  border: none;
+  color:white;
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
   .nav{
     width:100vw;
     height:10vh;
-    background: rgb(132, 0, 255);
+    /*background: rgb(132, 0, 255);*/
+    background-color: #0063B2FF;
     text-align: center;
   }
   .nav > h2{
@@ -68,25 +65,24 @@
     width:100vw;
     height:90vh;
     padding:4%;
-    background-color: #000000;
+    background-color: #9CC3D5FF;
     display: flex;
     align-items: center;
     justify-content: center;
     
 
   }
-
-  form{
+  form
+  {
     width:50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(86, 4, 124, 0.699);
+    /*background: rgba(86, 4, 124, 0.699);*/
+    background-color: #0063B2FF;
     color:wheat;
-  
-
-
+    padding: 5%;
   }
 
   form > div{
