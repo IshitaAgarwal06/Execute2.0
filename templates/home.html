@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="nav"><h2 style="text-align: centre;color:white;">CONSULTANCY</h2></div>
+  <div class="main">
+    <!-- uniqueid=models.CharField(max_length=100,default="0")
+	companyname=models.CharField(max_length=100)
+	businesstype=models.CharField(max_length=100)
+	productname=models.CharField(max_length=100)
+	targetaudience=models.CharField(max_length=100)
+	theinfo=models.FileField(default="images/default.pdf")
+	fileuploaded=models.BooleanField(default=False)
+	mail=models.CharField(max_length=1000)
+	phno=models.CharField(max_length=100)
+	accepted=models.BooleanField(default=False) -->
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+     <!-- <label>UNIQUEID:</label>
+     <div>{{form.uniqueid}}</div> -->
+     <label>COMPANY NAME:</label>
+     <div>{{form.companyname}}</div>
+     <label>EMAIL</label>
+     <div>{{form.mail}}</div>
+     <label>PHONE NUMBER</label>
+     <div>{{form.phno}}</div>
+     <label>BUSINESS TYPE</label>
+     <div>{{form.businesstype}}</div>
+     <label>PRODUCT NAME</label>
+     <div>{{form.productname}}</div>
+     <label>TARGET AUDIENCE</label>
+     <div>{{form.targetaudience}}</div>
+     <label>INFO</label>
+     <div>{{form.theinfo}}</div>
+     <!-- <label>FILE UPLOADED</label>
+     <div>{{form.fileuploaded}}</div> -->
+    <input type="submit" value="Submit">
+   
+    </form>
+  </div>
+</body>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  .nav{
+    width:100vw;
+    height:10vh;
+    background: rgb(132, 0, 255);
+    text-align: center;
+  }
+  .nav > h2{
+    padding:1%;
+  }
+
+  .main{
+    width:100vw;
+    height:90vh;
+    padding:4%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+
+  form{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(86, 4, 124, 0.699);
+    color:wheat;
+  
+
+
+  }
+
+  form > div{
+    height:2rem;
+  }
+  form > input{
+    width: 50%;
+  }
+</style>
+</html>
